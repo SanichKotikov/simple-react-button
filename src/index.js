@@ -1,22 +1,13 @@
+'use strict';
+
 import React, { Component, PropTypes } from 'react';
-import './styles.scss';
+import '../styles.scss';
 
 const DELAY = 300;
 const LOADER_DELAY = 900;
 const CLASS_NAME = 'button';
 
-export default class Button extends Component {
-
-    static defaultProps = {
-        type: 'button',
-    };
-
-    static propTypes = {
-        type: PropTypes.oneOf(['button', 'submit', 'reset']),
-        className: React.PropTypes.string,
-        value: React.PropTypes.string.isRequired,
-        clickHandler: React.PropTypes.func.isRequired,
-    };
+class Button extends Component {
 
     constructor(props) {
         super(props);
@@ -63,3 +54,16 @@ export default class Button extends Component {
         );
     }
 }
+
+Button.defaultProps = {
+    type: 'button',
+};
+
+Button.propTypes = {
+    type: PropTypes.oneOf(['button', 'submit', 'reset']),
+    className: React.PropTypes.string,
+    value: React.PropTypes.string.isRequired,
+    clickHandler: React.PropTypes.func.isRequired,
+};
+
+module.exports = Button;
