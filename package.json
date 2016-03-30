@@ -1,0 +1,23 @@
+{
+  "name": "simple-react-button",
+  "version": "1.0.0",
+  "description": "A simple ReactJS Button component",
+  "main": "index.js",
+  "scripts": { },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cdrpro/simple-react-button.git"
+  },
+  "author": "Sanich <sancho@cdrpro.ru> (http://cdrpro.ru)",
+  "license": "MIT",
+  "keywords": [
+    "button",
+    "react-component",
+    "react",
+    "ui"
+  ],
+  "bugs": {
+    "url": "https://github.com/cdrpro/simple-react-button/issues"
+  },
+  "homepage": "https://github.com/cdrpro/simple-react-button"
+}

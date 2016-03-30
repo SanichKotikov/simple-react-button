@@ -56,7 +56,7 @@ export default class Button extends Component {
             <input
                 type={type}
                 className={classNames}
-                value={this.state.showLoading === true ? 'Loading...' : value}
+                value={this.state.showLoading === true ? 'Processing...' : value}
                 disabled={this.state.disabled}
                 onClick={event => this.onClick(event)}
             />
