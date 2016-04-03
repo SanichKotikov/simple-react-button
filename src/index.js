@@ -1,7 +1,6 @@
 'use strict';
 
 import React, { Component, PropTypes } from 'react';
-import '../styles.scss';
 
 const DELAY = 300;
 const LOADER_DELAY = 900;
@@ -19,6 +18,10 @@ class Button extends Component {
 
     onClick(event) {
         const { clickHandler } = this.props;
+
+        event.preventDefault();
+        event.stopPropagation();
+
         this.setState({ disabled: true });
 
         const handler = clickHandler();

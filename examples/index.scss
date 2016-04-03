@@ -1,0 +1,56 @@
+* {
+    box-sizing: inherit;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 20px;
+    font-family: 'Helvetica Neue', 'Arial';
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 300;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -webkit-font-smoothing: antialiased;
+}
+
+.app-buttons {
+    margin: 10px 0;
+}
+
+.button {
+    & + & {
+        margin-left: 4px;
+    }
+}
+
+// *****************************
+
+$green: #66ab2c;
+
+.your-additional-class {
+    color: #fff;
+    background: $green;
+
+    &:hover {
+        background: lighten($green, 4%);
+    }
+
+    &:active {
+        background: darken($green, 4%);
+    }
+
+    &:disabled {
+        color: #ccc;
+        cursor: default;
+        background: #eee;
+    }
+}

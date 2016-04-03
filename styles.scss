@@ -15,6 +15,7 @@ $background: #eee;
     border-radius: 2px;
     user-select: none;
     touch-action: manipulation;
+    appearance: none;
 
     &:hover {
         background: lighten($background, 2%);
