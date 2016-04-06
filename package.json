@@ -1,10 +1,10 @@
 {
   "name": "simple-react-button",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "A simple ReactJS Button component",
   "main": "./lib/index.js",
   "scripts": {
-    "build": "./node_modules/.bin/gulp"
+    "build": "rm -rf lib && mkdir lib && ./node_modules/.bin/babel ./src/index.js -o ./lib/index.js"
   },
   "repository": {
     "type": "git",
@@ -22,11 +22,10 @@
     "url": "https://github.com/cdrpro/simple-react-button/issues"
   },
   "devDependencies": {
+    "babel-cli": "^6.6.5",
     "babel-preset-es2015": "^6.6.0",
-    "babel-preset-stage-0": "^6.5.0",
-    "gulp": "^3.9.1",
-    "gulp-babel": "^6.1.2",
-    "gulp-react": "^3.1.0"
+    "babel-preset-react": "^6.5.0",
+    "babel-preset-stage-0": "^6.5.0"
   },
   "homepage": "https://github.com/cdrpro/simple-react-button"
 }

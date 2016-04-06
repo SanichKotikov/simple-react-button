@@ -19,7 +19,14 @@ onClick() { }
 <Button value='Click Me!' clickHandler={this.onClick.bind(this)} />
 ```
 
-More [examples](./examples/README.md).
+More [examples](https://github.com/cdrpro/simple-react-button/tree/master/examples#examples).
+
+## Props
+
+* type: (`button`, `submit`, `reset`). Default is `button`.
+* className: (string) additional className.
+* value: (required, string) initial value of the button.
+* clickHandler: (required) function to be called when the button is clicked.
 
 ## License
 

@@ -8,6 +8,17 @@ const CLASS_NAME = 'button';
 
 class Button extends Component {
 
+    static defaultProps = {
+        type: 'button',
+    };
+
+    static propTypes = {
+        type: PropTypes.oneOf(['button', 'submit', 'reset']).isRequired,
+        className: React.PropTypes.string,
+        value: React.PropTypes.string.isRequired,
+        clickHandler: React.PropTypes.func.isRequired,
+    };
+
     constructor(props) {
         super(props);
         this.state = {
@@ -57,16 +68,5 @@ class Button extends Component {
         );
     }
 }
-
-Button.defaultProps = {
-    type: 'button',
-};
-
-Button.propTypes = {
-    type: PropTypes.oneOf(['button', 'submit', 'reset']),
-    className: React.PropTypes.string,
-    value: React.PropTypes.string.isRequired,
-    clickHandler: React.PropTypes.func.isRequired,
-};
 
 module.exports = Button;

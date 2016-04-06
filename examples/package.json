@@ -23,7 +23,7 @@
   "dependencies": {
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
-    "simple-react-button": "1.2.0"
+    "simple-react-button": "1.2.1"
   },
   "scripts": {
     "dev": "./node_modules/.bin/webpack -w"
