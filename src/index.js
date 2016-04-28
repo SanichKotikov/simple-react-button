@@ -14,9 +14,10 @@ class Button extends Component {
 
     static propTypes = {
         type: PropTypes.oneOf(['button', 'submit', 'reset']).isRequired,
-        className: React.PropTypes.string,
-        value: React.PropTypes.string.isRequired,
-        clickHandler: React.PropTypes.func.isRequired,
+        className: PropTypes.string,
+        disabled: PropTypes.bool,
+        value: PropTypes.string.isRequired,
+        clickHandler: PropTypes.func.isRequired,
     };
 
     constructor(props) {
@@ -54,7 +55,7 @@ class Button extends Component {
     }
 
     render() {
-        const { type, className, value } = this.props;
+        const { type, className, disabled, value } = this.props;
         const classNames = !className ? CLASS_NAME : `${CLASS_NAME} ${className}`;
 
         return (
@@ -62,7 +63,7 @@ class Button extends Component {
                 type={type}
                 className={classNames}
                 value={this.state.showLoading === true ? 'Processing...' : value}
-                disabled={this.state.disabled}
+                disabled={disabled === true ? disabled : this.state.disabled}
                 onClick={event => this.onClick(event)}
             />
         );

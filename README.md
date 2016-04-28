@@ -25,6 +25,7 @@ More [examples](https://github.com/cdrpro/simple-react-button/tree/master/exampl
 
 * type: (`button`, `submit`, `reset`). Default is `button`.
 * className: (string) additional className.
+* disabled: (bool) disabled attribute.
 * value: (required, string) initial value of the button.
 * clickHandler: (required) function to be called when the button is clicked.
 
