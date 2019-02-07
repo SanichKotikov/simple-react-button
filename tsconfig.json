@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "rootDir": "src",
+    "target": "es6",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "lib": ["es6", "dom"],
+    "jsx": "react",
+    "outDir": "lib",
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+    "alwaysStrict": true,
+    "sourceMap": true,
+    "declaration": true,
+    "removeComments": true,
+    "strict": true,
+    "noImplicitReturns": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "allowSyntheticDefaultImports": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"]
+}

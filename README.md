@@ -1,7 +1,6 @@
 # Button Component
 
-A simple ReactJS Button component.   
-Include base styles in `styles.scss` (import separately).
+A simple ReactJS Button component.
 
 ## Install
 
@@ -12,22 +11,37 @@ $ npm install simple-react-button --save
 ## Usage
 
 ```js
+import React, { useCallback } from 'react';
 import Button from 'simple-react-button';
 
-onClick() { }
+const YourComponent = () => {
+  const onTestClick = useCallback((event) => {
+    return fetch().then(doSomething);
+  }, []);
 
-<Button value='Click Me!' clickHandler={this.onClick.bind(this)} />
+  return (
+    <div>
+      <Button onClick={onTestClick}>
+        Button text
+      </Button>
+    </div>
+  );
+};
+
+export default YourComponent;
+
 ```
-
-More [examples](https://github.com/cdrpro/simple-react-button/tree/master/examples#examples).
 
 ## Props
 
-* type: (`button`, `submit`, `reset`). Default is `button`.
-* className: (string) additional className.
-* disabled: (bool) disabled attribute.
-* value: (required, string) initial value of the button.
-* clickHandler: (required) function to be called when the button is clicked.
+```ts
+interface IButtonProps {
+  type?: 'button' | 'submit' | 'reset';
+  disabled?: boolean;
+  className?: string;
+  onClick: <T>(event: React.MouseEvent<HTMLButtonElement>) => void | Promise<T>;
+}
+```
 
 ## License
 
